@@ -11,7 +11,6 @@ Source:		http://digitalssg.net/debian/%{name}-%{version}.tar.bz2
 URL:		http://wmwifi.digitalssg.net/
 License:	GPL
 Group:		Graphical desktop/WindowMaker
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	pkgconfig ImageMagick X11-devel
 
 %description
