@@ -31,9 +31,15 @@ rm -rf $RPM_BUILD_ROOT
 %makeinstall
 
 #menu
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}): command="%{name}" icon="%{name}.png" needs="x11" title="WMWifi" longtitle="Wireless network docklet" section="System/Monitoring"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
+[Desktop Entry]
+Type=Application
+Exec=%{name}
+Icon=%{name}
+Name=WMWifi
+Comment=Wireless network docklet
+Categories=System;Monitor;
 EOF
 
 #icons
@@ -57,7 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc AUTHORS ChangeLog README
 %{_bindir}/%name
-%{_menudir}/%name
+%{_datadir}/applications/mandriva-%name.desktop
 %{_liconsdir}/%name.png
 %{_iconsdir}/%name.png
 %{_miconsdir}/%name.png
