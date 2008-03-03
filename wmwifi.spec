@@ -1,6 +1,6 @@
 %define name	wmwifi
 %define version	0.6
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name: 	 	%{name}
 Summary: 	Wireless network monitor for Window Maker
@@ -8,6 +8,7 @@ Version: 	%{version}
 Release: 	%{release}
 
 Source:		http://digitalssg.net/debian/%{name}-%{version}.tar.bz2
+Patch0:		wireless_h_hack.patch
 URL:		http://wmwifi.digitalssg.net/
 License:	GPL
 Group:		Graphical desktop/WindowMaker
@@ -21,6 +22,7 @@ the Linux kernels Wireless Extensions. This means that if you do a cat
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure2_5x
