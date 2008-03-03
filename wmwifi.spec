@@ -1,19 +1,24 @@
 %define name	wmwifi
 %define version	0.6
-%define release %mkrel 2
+%define release %mkrel 3
 
 Name: 	 	%{name}
-Summary: 	Wireless network monitor for Window Maker
+Summary: 	Wireless network monitor for WindowMaker
 Version: 	%{version}
 Release: 	%{release}
 
 Source:		http://digitalssg.net/debian/%{name}-%{version}.tar.bz2
-Patch0:		wireless_h_hack.patch
+# P0 for <http://archives.mandrivalinux.com/kernel-discuss/2008-03/msg00009.php>
+Patch0:		wirelessh_X_ifh.patch
 URL:		http://wmwifi.digitalssg.net/
-License:	GPL
+License:	GPLv2+
 Group:		Graphical desktop/WindowMaker
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildRequires:	pkgconfig ImageMagick X11-devel
+BuildRequires:	libxpm-devel
+BuildRequires:	libxext-devel
+BuildRequires:	libxau-devel
+BuildRequires:	libxdmcp-devel
+BuildRequires:	pkgconfig ImageMagick
 
 %description
 WmWiFi should support any wireless drivers as long as those drivers support
