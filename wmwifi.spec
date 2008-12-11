@@ -18,7 +18,7 @@ BuildRequires:	libxpm-devel
 BuildRequires:	libxext-devel
 BuildRequires:	libxau-devel
 BuildRequires:	libxdmcp-devel
-BuildRequires:	pkgconfig ImageMagick
+BuildRequires:	pkgconfig imagemagick
 
 %description
 WmWiFi should support any wireless drivers as long as those drivers support
