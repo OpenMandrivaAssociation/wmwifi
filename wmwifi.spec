@@ -8,17 +8,14 @@ Version: 	%{version}
 Release: 	%{release}
 
 Source:		http://digitalssg.net/debian/%{name}-%{version}.tar.bz2
-# P0 for <http://archives.mandrivalinux.com/kernel-discuss/2008-03/msg00009.php>
-Patch0:		wirelessh_X_ifh.patch
 URL:		http://wmwifi.digitalssg.net/
 License:	GPLv2+
 Group:		Graphical desktop/WindowMaker
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	libxpm-devel
 BuildRequires:	libxext-devel
-BuildRequires:	libxau-devel
-BuildRequires:	libxdmcp-devel
-BuildRequires:	pkgconfig imagemagick
+BuildRequires:	libx11-devel
+BuildRequires:	imagemagick
 
 %description
 WmWiFi should support any wireless drivers as long as those drivers support
@@ -27,7 +24,6 @@ the Linux kernels Wireless Extensions. This means that if you do a cat
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %configure2_5x
@@ -35,7 +31,7 @@ the Linux kernels Wireless Extensions. This means that if you do a cat
 										
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall
+%makeinstall_std
 
 #menu
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
