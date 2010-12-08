@@ -1,6 +1,6 @@
 %define name	wmwifi
 %define version	0.6
-%define release %mkrel 10
+%define release %mkrel 11
 
 Name: 	 	%{name}
 Summary: 	Wireless network monitor for WindowMaker
