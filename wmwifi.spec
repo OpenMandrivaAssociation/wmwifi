@@ -12,9 +12,9 @@ URL:		http://wmwifi.digitalssg.net/
 License:	GPLv2+
 Group:		Graphical desktop/WindowMaker
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildRequires:	libxpm-devel
-BuildRequires:	libxext-devel
-BuildRequires:	libx11-devel
+BuildRequires:	pkgconfig(xpm)
+BuildRequires:	pkgconfig(xext)
+BuildRequires:	pkgconfig(x11)
 BuildRequires:	imagemagick
 
 %description
