@@ -1,6 +1,6 @@
 %define name	wmwifi
 %define version	0.6
-%define release %mkrel 11
+%define release  12
 
 Name: 	 	%{name}
 Summary: 	Wireless network monitor for WindowMaker
@@ -11,7 +11,6 @@ Source:		http://digitalssg.net/debian/%{name}-%{version}.tar.bz2
 URL:		http://wmwifi.digitalssg.net/
 License:	GPLv2+
 Group:		Graphical desktop/WindowMaker
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	pkgconfig(xpm)
 BuildRequires:	pkgconfig(xext)
 BuildRequires:	pkgconfig(x11)
