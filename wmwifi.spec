@@ -8,7 +8,7 @@ Version: 	%{version}
 Release: 	%{release}
 
 Source:		http://digitalssg.net/debian/%{name}-%{version}.tar.bz2
-URL:		http://wmwifi.digitalssg.net/
+URL:		https://wmwifi.digitalssg.net/
 License:	GPLv2+
 Group:		Graphical desktop/WindowMaker
 BuildRequires:	pkgconfig(xpm)
